@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins';
+}
+
+header{
+    background: #000;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu .nav-link{
+    margin: 0px 10px;
+    color: #757575;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu .nav-link:hover{
+    color: #000000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+  
+    justify-content: center;
+}
+
+.logo i{
+    margin: 0px 10px;
+    color: green;
+}
+
+.nav-btns i{
+    margin: 0px 10px;
+}
+
+#toggle{
+    cursor: pointer;
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+}
+
+.mobile-show{
+    display: none;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opactiy 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .overlay.active{
+        opacity: 1;
+    }
+    #toggle{
+        display: block;
+    }
+
+    .nav-menu{
+        position: absolute;
+        top: 0;
+        left: -500px;
+        right: 0;
+        text-align: center;
+        background-color: #f8f8f8;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    .nav-menu .nav-item{
+        padding: 15px 0px;
+    }
+
+    .nav-menu.active{
+        left: 0; 
+        opacity: 1;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+   #toggle.active .bar:nth-child(2){
+    opacity: 0;
+   }
+
+   #toggle.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+   }
+
+   #toggle.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+   }
+}
