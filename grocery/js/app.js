@@ -8,3 +8,11 @@ toggle.addEventListener("click", function () {
   toggle.classList.toggle("active");
   navmenu.classList.toggle("active");
 });
+
+window.addEventListener("click", function (e) {
+  if (e.target == overlay) {
+    overlay.classList.remove("active");
+    toggle.classList.remove("active");
+    navmenu.classList.remove("active");
+  }
+});

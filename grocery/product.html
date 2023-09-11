@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Grocery</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-basket-shopping fa-2x"></i>
+        <h1>Grocery</h1>
+      </div>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search product..." />
+      </div>
+
+      <div class="header-links">
+        <span>
+          <i class="fa-solid fa-user"></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </span>
+      </div>
+    </header>
+
+    <navbar class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Products</a>
+        </li>
+      </ul>
+
+      <span id="toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </span>
+    </navbar>
+
+    <main id="main">
+      <div class="container">
+        <section id="product" class="product section-padding">
+          <div class="row">
+            <div class="col-6 col-sm-12 product-img">
+              <img src="img/grocery-product-1.png" alt="" class="img-fluid" />
+            </div>
+            <div class="col-6 col-sm-12 product-text">
+              <h3>Organic Broccoli</h3>
+              <span>$5.00</span>
+              <p>
+                Rhoncus est pellentesque elit ullamcorper. Consequat ac felis
+                donec et odio pellentesque diam. Elementum nibh tellus molestie
+                nunc non blandit massa enim nec. Ipsum consequat nisl vel
+                pretium.
+              </p>
+              <a href="#" class="btn btn-green">Add To Cart</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="related-product" class="related-product section-padding">
+          <div class="row">
+            <div class="col-12">
+              <div class="heading">
+                <h3>Related Product</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3 col-md-6 col-sm-12">
+              <div class="product">
+                <img src="img/grocery-product-2.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12">
+              <div class="product">
+                <img src="img/grocery-product-2.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12">
+              <div class="product">
+                <img src="img/grocery-product-2.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12">
+              <div class="product">
+                <img src="img/grocery-product-2.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="js/app.js"></script>
+</html>

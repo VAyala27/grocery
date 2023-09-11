@@ -8,20 +8,138 @@
     font-family: 'Poppins';
 }
 
-header{
-    background: #000;
+
+/* UTILITIES */
+.container{
+    width: 100%;
+    overflow: auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.navbar{
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opactiy 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+.section-padding{
+    padding: 50px 0px;
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.btn{
+    font-size: 14px;
+    padding: 10px 25px;
+    background: #84ba40;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+
+.col-12{
+    width: 100%;
+}
+
+.col-3{
+    width: 20%;
+    max-width: 20%;
+}
+
+.col-4{
+    width: 30%;
+    max-width: 30%;
+}
+
+.col-6{
+    width: 40%;
+    max-width: 40%;
+}
+
+
+
+header{
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 10px 0px;
+    flex-wrap: wrap;
+}
+
+.header .search-bar{
+    display: flex;
+    align-items: center;
+}
+
+.header .search-bar i{
+    margin: 0px 10px;
+}
+
+input{
+    width: 500px; 
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    color: #676767;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #f4f4f4;  
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    
+  }
+  input:focus{
+    outline: none;
+  }
+
+  .header .header-links{
+    display: flex;
+    align-items: center;
+  }
+
+  .header .header-links i{
+    margin: 0px 10px;
+  }
+
+
+.navbar{
+    background: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
 }
 
 .nav-menu{
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .nav-menu .nav-link{
@@ -64,28 +182,83 @@ header{
     background: #fff;
 }
 
-.mobile-show{
-    display: none;
+
+#hero{
+    background: url("../img/grocery-banner-1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    transition: opactiy 0.3s ease-in-out;
-    opacity: 0;
-    z-index: -1;
-    height: 100vh;
-    width: 100%;
+#hero .hero-text{
+    padding: 20px 0px;
 }
+
+#hero h5{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#hero h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+
+/* Product Item */
+#product .product-text h3{
+    margin-bottom: 10px;
+}
+#product .product-text span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+#product .product-text p{
+    margin-bottom: 20px;
+}
+
+#related-product .heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 
 
 @media screen and (max-width: 768px) {
+    .row .col-md-6{
+        width: 40%;
+        max-width: 40%;
+    }
+
     .overlay.active{
         opacity: 1;
     }
+
+    .search-bar {
+        order: 3;
+        flex: 2;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header .header-links{
+        order: 2;
+    }
+
     #toggle{
         display: block;
     }
